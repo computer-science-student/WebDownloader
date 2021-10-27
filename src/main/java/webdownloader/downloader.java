@@ -29,8 +29,9 @@ public class downloader {
 		System.out.println("Translate the webpage? Enter (y/n)");
 		String translate_str = translate.readLine();
 		
-		
-		//System.out.println("Share webpage? Enter (y/n)");
+		BufferedReader share = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Share webpage? Enter (y/n)");
+		String share_str = share.readLine();
 		
 		
 		
