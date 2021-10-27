@@ -30,11 +30,14 @@ public class downloader {
 		String translate_str = translate.readLine();
 		
 		// If user inputed "y" char, then make a copy of the of the file in the directory
-		// and rename it translated_page.html
+		// and rename it translated_page.html.
 		if ("y".equals(translate_str) || "Y".equals(translate_str)
 				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
 			System.out.println("Translated the web page.");
-		} else if ("n".equals(translate_str)) {
+			// make a copy of the text or translate it here.
+			
+		} else if ("n".equals(translate_str) || "N".equals(translate_str) ||
+				"no".equals(translate_str) || "NO".equals(translate_str)) {
 			System.out.println("You decided not to translate the webpage.");
 		} else {
 			System.out.println("Text not recognized. Not translating the webpage.");
