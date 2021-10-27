@@ -37,12 +37,26 @@ public class downloader {
 		// and rename it translated_page.html.
 		if ("y".equals(translate_str) || "Y".equals(translate_str)
 				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
+			/*
+			 * I watched this Youtube Tutorial: https://www.youtube.com/watch?v=R9Bmz-9ZAJM
+			 * to learn how to copy a file. The following code assumes the user generated page.html
+			 * correctly, and it makes a copy of the file to the same directory (the directory of
+			 * this project).
+			 */
 			System.out.println("Translated the web page.");
 			// Make sure that the translated file actually exists! (This code assumes the user
 			// inputed data correctly).
-			//File translated_page = new File("translated_page.html");
+			
+			File writer = new File("page.html");
+			File translated_page = new File("translated_page.html");
 			
 			// make a copy of the text or translate it here.
+			try {
+				Files.copy(writer.toPath(),translated_page.toPath());
+			}
+			catch(Exception e) {
+				System.out.println("error");
+			}
 			
 		} else if ("n".equals(translate_str) || "N".equals(translate_str) ||
 				"no".equals(translate_str) || "NO".equals(translate_str)) {
