@@ -1,3 +1,4 @@
+// The way to download a webpage was taken from here: https://www.tutorialspoint.com/Download-webpage-in-Java
 package webdownloader;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
