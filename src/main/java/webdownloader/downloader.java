@@ -9,7 +9,20 @@ import java.net.URL;
 
 public class downloader {
    public static void main(String args[]) throws IOException {
-	   download("https://www.tutorialspoint.com");
+	   // Creating BufferedReader Object
+	   // InputStreamReader converts bytes to
+	   // stream of character
+	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
+	   
+	   // Asking for input from user
+	   System.out.println("Enter Webpage URL: ");
+	   
+		// String reading internally
+		String String_name = BufferedReader_Name.readLine();
+		
+		download(String_name);
+	   
+	   //download("https://www.tutorialspoint.com");
       //download("http://www.google.com");
    }
    public static void download(String urlString) throws IOException {
