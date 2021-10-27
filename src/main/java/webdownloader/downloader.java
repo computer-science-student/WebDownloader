@@ -1,4 +1,5 @@
 // The way to download a webpage was taken from here: https://www.tutorialspoint.com/Download-webpage-in-Java
+// The way I took input in from the user was taken from here: (TODO add credit here later).
 package webdownloader;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -21,9 +22,11 @@ public class downloader {
 		String String_name = BufferedReader_Name.readLine();
 		
 		download(String_name);
-	   
-	   //download("https://www.tutorialspoint.com");
-      //download("http://www.google.com");
+		//download("https://www.tutorialspoint.com");
+		//download("http://www.google.com");
+		
+		
+		
    }
    public static void download(String urlString) throws IOException {
       URL url = new URL(urlString);
