@@ -8,7 +8,8 @@ import java.net.URL;
 
 public class downloader {
    public static void main(String args[]) throws IOException {
-      download("http://www.google.com");
+	   download("https://www.tutorialspoint.com");
+      //download("http://www.google.com");
    }
    public static void download(String urlString) throws IOException {
       URL url = new URL(urlString);
