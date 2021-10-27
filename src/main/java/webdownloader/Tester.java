@@ -1,4 +1,3 @@
-// Class taken from here: https://www.tutorialspoint.com/Download-webpage-in-Java
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
