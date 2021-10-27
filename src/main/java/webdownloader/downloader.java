@@ -43,11 +43,9 @@ public class downloader {
 			 * correctly, and it makes a copy of the file to the same directory (the directory of
 			 * this project).
 			 */
-			System.out.println("Translated the web page.");
-			// Make sure that the translated file actually exists! (This code assumes the user
-			// inputed data correctly).
+			// Make sure that the translated file actually exists or else there may be errors!
 			
-			File writer = new File("page.html");
+			File writer = new File("page.html"); // makes a File object of the page.html.
 			File translated_page = new File("translated_page.html");
 			
 			// make a copy of the text or translate it here.
@@ -57,10 +55,12 @@ public class downloader {
 			catch(Exception e) {
 				System.out.println("error");
 			}
+			System.out.println("Translated the web page.");
 			
 		} else if ("n".equals(translate_str) || "N".equals(translate_str) ||
 				"no".equals(translate_str) || "NO".equals(translate_str)) {
 			System.out.println("You decided not to translate the webpage.");
+			
 		} else {
 			System.out.println("Text not recognized. Not translating the webpage.");
 		}
