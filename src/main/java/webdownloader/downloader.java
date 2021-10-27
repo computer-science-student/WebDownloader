@@ -25,6 +25,13 @@ public class downloader {
 		//download("https://www.tutorialspoint.com");
 		//download("http://www.google.com");
 		
+		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Translate the webpage? Enter (y/n)");
+		String translate_str = translate.readLine();
+		
+		
+		//System.out.println("Share webpage? Enter (y/n)");
+		
 		
 		
    }
