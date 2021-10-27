@@ -34,6 +34,9 @@ public class downloader {
 		if ("y".equals(translate_str) || "Y".equals(translate_str)
 				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
 			System.out.println("Translated the web page.");
+			// Make sure that the translated file actually exists! (This code assumes the user
+			// inputed data correctly).
+			
 			// make a copy of the text or translate it here.
 			
 		} else if ("n".equals(translate_str) || "N".equals(translate_str) ||
