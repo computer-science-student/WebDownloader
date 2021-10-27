@@ -29,11 +29,16 @@ public class downloader {
 		System.out.println("Translate the webpage? Enter (y/n)");
 		String translate_str = translate.readLine();
 		
+		// If user inputed "y" char, then make a copy of the of the file in the directory
+		// and rename it translated_page.html
+		if (true) {
+			System.out.println("True!");
+		}
+		
+		
 		BufferedReader share = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Share webpage? Enter (y/n)");
-		String share_str = share.readLine();
-		
-		
+		String share_str = share.readLine();		
 		
    }
    public static void download(String urlString) throws IOException {
