@@ -7,6 +7,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+// import modules for copying file.
+import java.io.File;
+import java.nio.file.Files;
+
 
 public class downloader {
    public static void main(String args[]) throws IOException {
@@ -36,6 +40,7 @@ public class downloader {
 			System.out.println("Translated the web page.");
 			// Make sure that the translated file actually exists! (This code assumes the user
 			// inputed data correctly).
+			//File translated_page = new File("translated_page.html");
 			
 			// make a copy of the text or translate it here.
 			
