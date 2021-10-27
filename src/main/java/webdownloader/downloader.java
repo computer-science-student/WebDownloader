@@ -53,7 +53,7 @@ public class downloader {
 				Files.copy(writer.toPath(),translated_page.toPath());
 			}
 			catch(Exception e) {
-				System.out.println("error");
+				//System.out.println("error");
 			}
 			System.out.println("Translated the web page.");
 			
