@@ -20,7 +20,7 @@ public class downloader {
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   
 	   // Asking for input from user
-	   System.out.println("Enter Webpage URL: ");
+	   System.out.println("Save Webpage locally. Enter the full URL:");
 	   
 		// String reading internally
 		String String_name = BufferedReader_Name.readLine();
@@ -30,7 +30,7 @@ public class downloader {
 		//download("http://www.google.com");
 		
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Translate the webpage? Enter (y/n)");
+		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
 		String translate_str = translate.readLine();
 		
 		// If user inputed "y" char, then make a copy of the of the file in the directory
