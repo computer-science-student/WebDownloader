@@ -43,6 +43,10 @@ public class downloader {
 			 * correctly, and it makes a copy of the file to the same directory (the directory of
 			 * this project).
 			 */
+			// Scrape just the text from the web page
+			
+			
+			
 			// Make sure that the translated file actually exists or else there may be errors!
 			
 			File writer = new File("page.html"); // makes a File object of the page.html.
