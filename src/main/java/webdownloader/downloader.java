@@ -43,7 +43,13 @@ public class downloader {
 			 * correctly, and it makes a copy of the file to the same directory (the directory of
 			 * this project).
 			 */
-			// Scrape
+			// If the user wants to translate, ask the user what language they want to translate to.
+			System.out.println("What language would you like to translate to?");
+			System.out.println("Please use the codes seen here: https://cloud.google.com/translate/docs/languages to tell what language you want to translate to.");
+			System.out.println("Failure to enter the correct code will result in no translation or the wrong translation.");
+			System.out.println("For example, if you want to translate to Chinese enter zh-TW or if you want to translate to Spanish enter es.");
+			
+			
 			
 			
 			// Make sure that the translated file actually exists or else there may be errors!
