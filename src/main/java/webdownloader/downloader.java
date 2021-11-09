@@ -45,9 +45,9 @@ public class downloader {
 			 */
 			// If the user wants to translate, ask the user what language they want to translate to.
 			System.out.println("What language would you like to translate to?");
-			System.out.println("Please use the codes seen here: https://cloud.google.com/translate/docs/languages to find the language code, and enter the code for the language you want to translate to that language.");
-			System.out.println("Failure to enter the correct code in this program will result in no translation or the wrong translation.");
+			System.out.println("Please use the codes seen here: https://cloud.google.com/translate/docs/languages to find the language code, and enter the code for the language you want to translate.");
 			System.out.println("For example, if you want to translate to Chinese enter zh-TW or if you want to translate to Spanish enter es.");
+			System.out.println("Failure to enter the correct code in this program will result in no translation or the wrong translation.");
 			
 			// take code from user
 			String language_code = translate.readLine();
