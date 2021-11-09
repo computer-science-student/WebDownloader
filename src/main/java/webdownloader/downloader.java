@@ -49,8 +49,10 @@ public class downloader {
 			System.out.println("Failure to enter the correct code in this program will result in no translation or the wrong translation.");
 			System.out.println("For example, if you want to translate to Chinese enter zh-TW or if you want to translate to Spanish enter es.");
 			
+			// take code from user
+			String language_code = translate.readLine();
 			
-			
+			System.out.println("You chose to translate to: " + language_code);
 			
 			// Make sure that the translated file actually exists or else there may be errors!
 			
