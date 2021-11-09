@@ -54,6 +54,8 @@ public class downloader {
 			
 			System.out.println("You chose to translate to: " + language_code);
 			
+			// Now write the code to a cvs file.
+			
 			// Make sure that the translated file actually exists or else there may be errors!
 			
 			File writer = new File("page.html"); // makes a File object of the page.html.
