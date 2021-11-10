@@ -39,10 +39,10 @@ public class downloader {
 		if ("app".equals(String_name) ||"APP".equals(String_name)
 				|| "application".equals(String_name)
 				|| "APPLICATION".equals(String_name)) {
-			// retrieve the url from website.csv file.
+			// retrieve the url from website.csv file. Use to be src\\main\\java\\file.csv
 			// Hardcode the location of the website.csv to read.
-			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\file.csv";
-			readDataLineByLine(readFile);			
+			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
+			readDataLineByLine(readFile);	
 			
 			System.out.println("Retrieved url from external application");
 		}		
