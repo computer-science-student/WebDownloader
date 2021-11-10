@@ -41,9 +41,9 @@ public class downloader {
 			
 			System.out.println("Retrieved url from external application");
 		} else {
+			// if the string is not app then download the webpage!
 			download(String_name);
 		}
-		// if the string is not app then download the webpage!
 		
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
