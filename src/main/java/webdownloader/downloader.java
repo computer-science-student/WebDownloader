@@ -42,8 +42,7 @@ public class downloader {
 			}
 
 	}
-	
-	
+		
 	
    public static void main(String args[]) throws IOException {
 	   // Creating BufferedReader Object
@@ -70,10 +69,12 @@ public class downloader {
 			// retrieve the url from website.csv file. Use to be src\\main\\java\\file.csv
 			// Hardcode the location of the website.csv to read.
 			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
-			readDataLineByLine(readFile);	
+			readDataLineByLine(readFile);
+			// Download the webpage here
+			download(urlString);
 			
 			//System.out.print(urlString);
-			System.out.println("Retrieved url ("+urlString+") from external application");
+			System.out.println("Retrieved url " + urlString + " from external application. Webpage downloaded.");
 		} else {
 			// if the string is not app then download the webpage!
 			download(String_name);
