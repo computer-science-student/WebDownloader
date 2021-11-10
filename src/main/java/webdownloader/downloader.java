@@ -73,7 +73,7 @@ public class downloader {
 			System.out.println("You chose to translate to: " + language_code);
 			
 			// Now write the code to a cvs file.
-			String translateFile = "translate.csv";
+			String translateFile = "file.csv";
 			try (
 		            Writer writer = Files.newBufferedWriter(Paths.get(translateFile));
 
@@ -83,7 +83,7 @@ public class downloader {
 		                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
 		                    CSVWriter.DEFAULT_LINE_END);
 		        ) {
-		            String[] headerRecord = {"Name", "Email", "Phone", "Country"};
+		            String[] headerRecord = {"Name", "Email", "Phone", "Country"}; // No headerRecord
 		            csvWriter.writeNext(headerRecord);
 
 		            csvWriter.writeNext(new String[]{"Sundar Pichai", "sundar.pichai@gmail.com", "+1-1111111111", "India"});
