@@ -21,7 +21,7 @@ public class downloader {
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   
 	   // Trying to read a file now.
-	   String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\python-cs-361\\file.csv";
+	   String readFile = "file.csv";
 	   readDataLineByLine(readFile);
 	   
 	   
