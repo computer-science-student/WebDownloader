@@ -19,7 +19,7 @@ public class downloader {
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   
 	   // Trying to read a file now.
-	   String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\webdownloader\\file.csv";
+	   String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\file.csv";
 	   readDataLineByLine(readFile);
 	   
 	   
@@ -124,6 +124,7 @@ public static void readDataLineByLine(String file)
 		// file reader as a parameter
 		CSVReader csvReader = new CSVReader(filereader);
 		String[] nextRecord;
+		System.out.println(file);
 
 		// we are going to read data line by line
 		while ((nextRecord = csvReader.readNext()) != null) {
