@@ -13,6 +13,37 @@ import java.nio.file.Paths;
 import java.io.*;
 
 public class downloader {
+
+	// Java code to illustrate reading a
+	// CSV file line by line taken from here:
+	// https://www.geeksforgeeks.org/reading-csv-file-java-using-opencsv/
+	public static void readDataLineByLine(String file)
+	{
+		try {
+			Scanner sc = new Scanner(new File(file));  
+			sc.useDelimiter(",");   //sets the delimiter pattern  
+			while (sc.hasNext())  //returns a boolean value  
+			{
+				if (sc.next().equals("website")) { // if we are reading in the website url
+					final String urlString = sc.next(); // set public string for url
+					System.out.print(urlString);
+					//System.out.println("Hi");
+				}
+			//System.out.print(sc.next());  //find and returns the next complete token from this scanner  
+			}   
+			sc.close();  //closes the scanner
+		}
+		catch (Exception e) {
+			e.printStackTrace();	
+		}
+		finally {
+	        //csvReader.close();
+			}
+
+	}
+	
+	
+	
    public static void main(String args[]) throws IOException {
 	   // Creating BufferedReader Object
 	   // InputStreamReader converts bytes to
@@ -136,33 +167,7 @@ public class downloader {
    }
    
    
-// Java code to illustrate reading a
-// CSV file line by line taken from here:
-// https://www.geeksforgeeks.org/reading-csv-file-java-using-opencsv/
-public static void readDataLineByLine(String file)
-{
-	try {
-		Scanner sc = new Scanner(new File(file));  
-		sc.useDelimiter(",");   //sets the delimiter pattern  
-		while (sc.hasNext())  //returns a boolean value  
-		{
-			if (sc.next().equals("website")) { // if we are reading in the website url
-				final String urlString = sc.next(); // set public string for url
-				System.out.print(urlString);
-				//System.out.println("Hi");
-			}
-		//System.out.print(sc.next());  //find and returns the next complete token from this scanner  
-		}   
-		sc.close();  //closes the scanner
-	}
-	catch (Exception e) {
-		e.printStackTrace();	
-	}
-	finally {
-        //csvReader.close();
-		}
 
-}
 
    
    
