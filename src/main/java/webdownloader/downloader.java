@@ -40,7 +40,7 @@ public class downloader {
 		String translate_str = translate.readLine();
 		
 		// If user inputed "app" then read the url from the .csv file.
-		if ("app".equals(translate_str) ||"APP".equals(translate_str) 
+		if ("app".equals(String_name) ||"APP".equals(translate_str) 
 				||"application".equals(translate_str)
 				|| "APPLICATION".equals(translate_str)) {
 			System.out.println("Retrieved url from external application");
