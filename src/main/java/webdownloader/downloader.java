@@ -19,7 +19,7 @@ public class downloader {
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   
 	   // Trying to read a file now.
-	   String readFile = "file.csv";
+	   String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\webdownloader\\file.csv";
 	   readDataLineByLine(readFile);
 	   
 	   
