@@ -86,7 +86,7 @@ public class downloader {
 		            String[] headerRecord = {}; // No headerRecord
 
 		            csvWriter.writeNext(new String[]{"Original", "Hello!"});
-		            csvWriter.writeNext(new String[]{"Language", "some language code here"});
+		            csvWriter.writeNext(new String[]{"Language", language_code});
 		        }
 			
 			
