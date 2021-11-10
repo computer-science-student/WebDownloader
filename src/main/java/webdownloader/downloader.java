@@ -20,16 +20,13 @@ public class downloader {
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   
 	   // Trying to read a file now.
+	   // My teammate's .csv file has to contain the url of something I download.
 	   String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\file.csv";
 	   readDataLineByLine(readFile);
-	   
-	   
-	   
-	   
-	   
-	   
+	      
 	   // Asking for input from user
 	   System.out.println("Save Webpage locally. Enter the full URL:");
+	   System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another application.");
 	   
 		// String reading internally
 		String String_name = BufferedReader_Name.readLine();
