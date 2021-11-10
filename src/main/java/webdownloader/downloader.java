@@ -56,6 +56,9 @@ public class downloader {
 			System.out.println("You chose to translate to: " + language_code);
 			
 			// Now write the code to a cvs file.
+			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\python-cs-361\\file.csv";
+			readDataLineByLine(readFile);
+			
 			
 			// Make sure that the translated file actually exists or else there may be errors!
 			
