@@ -21,8 +21,8 @@ public class downloader {
 	   
 	   // Trying to read a file now.
 	   // My teammate's .csv file has to contain the url of something I download.
-	   String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\file.csv";
-	   readDataLineByLine(readFile);
+	   //String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\file.csv";
+	   //readDataLineByLine(readFile);
 	      
 	   // Asking for input from user
 	   System.out.println("Save Webpage locally. Enter the full URL:");
@@ -40,6 +40,8 @@ public class downloader {
 				|| "application".equals(String_name)
 				|| "APPLICATION".equals(String_name)) {
 			// retrieve the url from website.csv file.
+			
+			
 			System.out.println("Retrieved url from external application");
 		}		
 		
