@@ -85,8 +85,8 @@ public class downloader {
 		        ) {
 		            String[] headerRecord = {}; // No headerRecord
 
-		            csvWriter.writeNext(new String[]{"Sundar Pichai", "sundar.pichai@gmail.com"});
-		            csvWriter.writeNext(new String[]{"Satya Nadella", "satya.nadella@outlook.com"});
+		            csvWriter.writeNext(new String[]{"Original", "Hello!"});
+		            csvWriter.writeNext(new String[]{"Language", "some language code here"});
 		        }
 			
 			
