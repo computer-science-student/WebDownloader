@@ -39,6 +39,7 @@ public class downloader {
 		if ("app".equals(String_name) ||"APP".equals(String_name)
 				|| "application".equals(String_name)
 				|| "APPLICATION".equals(String_name)) {
+			// retrieve the url from website.csv file.
 			System.out.println("Retrieved url from external application");
 		}		
 		
