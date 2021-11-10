@@ -39,6 +39,15 @@ public class downloader {
 		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
 		String translate_str = translate.readLine();
 		
+		// If user inputed "app" then read the url from the .csv file.
+		if ("app".equals(translate_str) ||"APP".equals(translate_str) 
+				||"application".equals(translate_str)
+				|| "APPLICATION".equals(translate_str)) {
+			System.out.println("Retrieved url from external application");
+		}
+		
+		
+		
 		// If user inputed "y" char, then make a copy of the of the file in the directory
 		// and rename it translated_page.html.
 		if ("y".equals(translate_str) || "Y".equals(translate_str)
