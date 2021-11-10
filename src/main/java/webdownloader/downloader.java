@@ -143,9 +143,9 @@ public static void readDataLineByLine(String file)
 		sc.useDelimiter(",");   //sets the delimiter pattern  
 		while (sc.hasNext())  //returns a boolean value  
 		{
-			
-			if (sc.next().equals("website")) {
-				System.out.print(sc.next());
+			if (sc.next().equals("website")) { // if we are reading in the website url
+				String urlString = sc.next(); // set public string for url
+				System.out.print(urlString);
 				//System.out.println("Hi");
 			}
 		//System.out.print(sc.next());  //find and returns the next complete token from this scanner  
