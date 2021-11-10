@@ -83,8 +83,7 @@ public class downloader {
 		                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
 		                    CSVWriter.DEFAULT_LINE_END);
 		        ) {
-		            String[] headerRecord = {}; // No headerRecord  
-		            //csvWriter.writeNext(headerRecord);
+		            String[] headerRecord = {}; // No headerRecord
 
 		            csvWriter.writeNext(new String[]{"Sundar Pichai", "sundar.pichai@gmail.com", "+1-1111111111", "India"});
 		            csvWriter.writeNext(new String[]{"Satya Nadella", "satya.nadella@outlook.com", "+1-1111111112", "India"});
