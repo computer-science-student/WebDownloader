@@ -26,7 +26,7 @@ public class downloader {
 	      
 	   // Asking for input from user
 	   System.out.println("Save Webpage locally. Enter the full URL:");
-	   System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another application.");
+	   System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
 	   
 		// String reading internally
 		String String_name = BufferedReader_Name.readLine();
@@ -36,11 +36,11 @@ public class downloader {
 		//download("http://www.google.com");
 		
 		// If user inputed "app" then read the url from the .csv file.
-		if ("app".equals(String_name)) {
+		if ("app".equals(String_name) ||"APP".equals(String_name)
+				|| "application".equals(String_name)
+				|| "APPLICATION".equals(String_name)) {
 			System.out.println("Retrieved url from external application");
-		}
-		
-		
+		}		
 		
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
