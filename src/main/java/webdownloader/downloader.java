@@ -18,12 +18,7 @@ public class downloader {
 	   // InputStreamReader converts bytes to
 	   // stream of character
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
-	   
-	   // Trying to read a file now.
-	   // My teammate's .csv file has to contain the url of something I download.
-	   //String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\file.csv";
-	   //readDataLineByLine(readFile);
-	      
+	   	      
 	   // Asking for input from user
 	   System.out.println("Save Webpage locally. Enter the full URL:");
 	   System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
@@ -31,7 +26,7 @@ public class downloader {
 		// String reading internally
 		String String_name = BufferedReader_Name.readLine();
 		
-		//download(String_name);
+		download(String_name);
 		//download("https://www.tutorialspoint.com");
 		//download("http://www.google.com");
 		
@@ -45,7 +40,8 @@ public class downloader {
 			readDataLineByLine(readFile);	
 			
 			System.out.println("Retrieved url from external application");
-		}		
+		}	
+		// if the string is not app then download the webpage!
 		
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
@@ -89,14 +85,6 @@ public class downloader {
 		            csvWriter.writeNext(new String[]{"Sundar Pichai", "sundar.pichai@gmail.com", "+1-1111111111", "India"});
 		            csvWriter.writeNext(new String[]{"Satya Nadella", "satya.nadella@outlook.com", "+1-1111111112", "India"});
 		        }
-			
-			
-			
-			
-			
-			
-			
-			
 			
 			
 			// Make sure that the translated file actually exists or else there may be errors!
