@@ -142,8 +142,13 @@ public static void readDataLineByLine(String file)
 		Scanner sc = new Scanner(new File(file));  
 		sc.useDelimiter(",");   //sets the delimiter pattern  
 		while (sc.hasNext())  //returns a boolean value  
-		{  
-		System.out.print(sc.next());  //find and returns the next complete token from this scanner  
+		{
+			
+			if (sc.next().equals("website")) {
+				System.out.print(sc.next());
+				//System.out.println("Hi");
+			}
+		//System.out.print(sc.next());  //find and returns the next complete token from this scanner  
 		}   
 		sc.close();  //closes the scanner
 	}
