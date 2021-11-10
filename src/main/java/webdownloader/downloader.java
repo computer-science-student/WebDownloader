@@ -4,6 +4,7 @@ package webdownloader;
 import java.net.URL;
 // import modules for copying file.
 import java.nio.file.Files;
+import java.util.Scanner;
 
 import com.opencsv.CSVReader;
 
@@ -115,24 +116,13 @@ public static void readDataLineByLine(String file)
 {
 
 	try {
-
-		// Create an object of filereader
-		// class with CSV file as a parameter.
-		FileReader filereader = new FileReader(file);
-
-		// create csvReader object passing
-		// file reader as a parameter
-		CSVReader csvReader = new CSVReader(filereader);
-		String[] nextRecord;
-		System.out.println(file);
-
-		// we are going to read data line by line
-		while ((nextRecord = csvReader.readNext()) != null) {
-			for (String cell : nextRecord) {
-				System.out.print(cell + "\t");
-			}
-			System.out.println();
-		}
+		Scanner sc = new Scanner(new File(file));  
+		sc.useDelimiter(",");   //sets the delimiter pattern  
+		while (sc.hasNext())  //returns a boolean value  
+		{  
+		System.out.print(sc.next());  //find and returns the next complete token from this scanner  
+		}   
+		sc.close();  //closes the scanner
 	}
 	catch (Exception e) {
 		e.printStackTrace();	
