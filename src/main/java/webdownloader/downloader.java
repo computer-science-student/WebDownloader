@@ -35,18 +35,16 @@ public class downloader {
 		//download("https://www.tutorialspoint.com");
 		//download("http://www.google.com");
 		
-		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
-		String translate_str = translate.readLine();
-		
 		// If user inputed "app" then read the url from the .csv file.
-		if ("app".equals(String_name) ||"APP".equals(translate_str) 
-				||"application".equals(translate_str)
-				|| "APPLICATION".equals(translate_str)) {
+		if ("app".equals(String_name)) {
 			System.out.println("Retrieved url from external application");
 		}
 		
 		
+		
+		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
+		String translate_str = translate.readLine();
 		
 		// If user inputed "y" char, then make a copy of the of the file in the directory
 		// and rename it translated_page.html.
