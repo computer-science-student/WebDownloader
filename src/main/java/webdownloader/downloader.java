@@ -26,7 +26,7 @@ public class downloader {
 		// String reading internally
 		String String_name = BufferedReader_Name.readLine();
 		
-		download(String_name);
+		//download(String_name);
 		//download("https://www.tutorialspoint.com");
 		//download("http://www.google.com");
 		
