@@ -11,7 +11,7 @@ import java.net.URL;
 import java.io.File;
 import java.nio.file.Files;
 //import modules for csv files
-
+import java.io.Reader; 
 
 public class downloader {
    public static void main(String args[]) throws IOException {
