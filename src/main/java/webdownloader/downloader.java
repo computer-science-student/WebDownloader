@@ -113,11 +113,12 @@ public class downloader {
 		} else {
 			System.out.println("Text not recognized. Not translating the webpage.");
 		}
+		// Maybe print out what the text on the webpage translated to??
 		
-		
+		/* Sharing functionality no longer seems to be needed.
 		BufferedReader share = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Share webpage? Enter (y/n)");
-		String share_str = share.readLine();		
+		String share_str = share.readLine();*/	
 		
    }
    public static void download(String urlString) throws IOException {
