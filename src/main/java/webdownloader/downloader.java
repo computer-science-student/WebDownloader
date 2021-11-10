@@ -72,8 +72,8 @@ public class downloader {
 			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
 			readDataLineByLine(readFile);	
 			
-			System.out.print(urlString);
-			System.out.println("Retrieved url from external application");
+			//System.out.print(urlString);
+			System.out.println("Retrieved url ("+urlString+") from external application");
 		} else {
 			// if the string is not app then download the webpage!
 			download(String_name);
