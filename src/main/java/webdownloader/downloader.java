@@ -4,6 +4,9 @@ package webdownloader;
 import java.net.URL;
 // import modules for copying file.
 import java.nio.file.Files;
+
+import com.opencsv.CSVReader;
+
 //import modules for csv files
 import java.io.*;
 
