@@ -71,6 +71,8 @@ public class downloader {
 			String language_code = translate.readLine();
 			
 			System.out.println("You chose to translate to: " + language_code);
+			// Get the text from webpage you downloaded!
+			
 			
 			// Now write the code to a cvs file.
 			String translateFile = "file.csv";
