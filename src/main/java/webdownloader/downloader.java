@@ -5,10 +5,11 @@ import java.net.URL;
 // import modules for copying file.
 import java.nio.file.Files;
 import java.util.Scanner;
-
+// modules for csv files
+import com.opencsv.CSVWriter;
 import com.opencsv.CSVReader;
-
-//import modules for csv files
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.io.*;
 
 public class downloader {
@@ -63,6 +64,30 @@ public class downloader {
 			System.out.println("You chose to translate to: " + language_code);
 			
 			// Now write the code to a cvs file.
+			String translateFile = "translate.csv";
+			try (
+		            Writer writer = Files.newBufferedWriter(Paths.get(translateFile));
+
+		            CSVWriter csvWriter = new CSVWriter(writer,
+		                    CSVWriter.DEFAULT_SEPARATOR,
+		                    CSVWriter.NO_QUOTE_CHARACTER,
+		                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+		                    CSVWriter.DEFAULT_LINE_END);
+		        ) {
+		            String[] headerRecord = {"Name", "Email", "Phone", "Country"};
+		            csvWriter.writeNext(headerRecord);
+
+		            csvWriter.writeNext(new String[]{"Sundar Pichai", "sundar.pichai@gmail.com", "+1-1111111111", "India"});
+		            csvWriter.writeNext(new String[]{"Satya Nadella", "satya.nadella@outlook.com", "+1-1111111112", "India"});
+		        }
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			// Make sure that the translated file actually exists or else there may be errors!
