@@ -26,7 +26,7 @@ public class downloader {
 		// String reading internally
 		String String_name = BufferedReader_Name.readLine();
 		
-		download(String_name);
+		//download(String_name);
 		//download("https://www.tutorialspoint.com");
 		//download("http://www.google.com");
 		
@@ -40,7 +40,9 @@ public class downloader {
 			readDataLineByLine(readFile);	
 			
 			System.out.println("Retrieved url from external application");
-		}	
+		} else {
+			download(String_name);
+		}
 		// if the string is not app then download the webpage!
 		
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
