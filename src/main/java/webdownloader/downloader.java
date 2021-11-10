@@ -134,8 +134,12 @@ public static void readDataLineByLine(String file)
 		}
 	}
 	catch (Exception e) {
-		e.printStackTrace();
+		e.printStackTrace();	
 	}
+	finally {
+        //csvReader.close();
+		}
+
 }
 
    
