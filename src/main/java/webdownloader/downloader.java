@@ -40,8 +40,8 @@ public class downloader {
 			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
 			readDataLineByLine(readFile);	
 			
-			System.out.print(urlString);
-			//System.out.println("Retrieved url from external application");
+			//System.out.print(urlString);
+			System.out.println("Retrieved url from external application");
 		} else {
 			// if the string is not app then download the webpage!
 			download(String_name);
@@ -146,7 +146,7 @@ public static void readDataLineByLine(String file)
 		{
 			if (sc.next().equals("website")) { // if we are reading in the website url
 				final String urlString = sc.next(); // set public string for url
-				//System.out.print(urlString);
+				System.out.println(urlString);
 				//System.out.println("Hi");
 			}
 		//System.out.print(sc.next());  //find and returns the next complete token from this scanner  
