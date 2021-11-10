@@ -145,9 +145,9 @@ public static void readDataLineByLine(String file)
 		while (sc.hasNext())  //returns a boolean value  
 		{
 			if (sc.next().equals("website")) { // if we are reading in the website url
-				//final String urlString = sc.next(); // set public string for url
-				//System.out.print(urlString);
-				System.out.println("Hi");
+				final String urlString = sc.next(); // set public string for url
+				System.out.print(urlString);
+				//System.out.println("Hi");
 			}
 		//System.out.print(sc.next());  //find and returns the next complete token from this scanner  
 		}   
