@@ -20,6 +20,15 @@ public class downloader {
 	   // stream of character
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   
+	   // Trying to read a file now.
+	   String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\python-cs-361\\file.csv";
+	   readDataLineByLine(readFile);
+	   
+	   
+	   
+	   
+	   
+	   
 	   // Asking for input from user
 	   System.out.println("Save Webpage locally. Enter the full URL:");
 	   
@@ -56,8 +65,6 @@ public class downloader {
 			System.out.println("You chose to translate to: " + language_code);
 			
 			// Now write the code to a cvs file.
-			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\python-cs-361\\file.csv";
-			readDataLineByLine(readFile);
 			
 			
 			// Make sure that the translated file actually exists or else there may be errors!
