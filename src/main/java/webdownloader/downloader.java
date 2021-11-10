@@ -11,7 +11,6 @@ import com.opencsv.CSVReader;
 //import modules for csv files
 import java.io.*;
 
-
 public class downloader {
    public static void main(String args[]) throws IOException {
 	   // Creating BufferedReader Object
@@ -114,7 +113,6 @@ public class downloader {
 // https://www.geeksforgeeks.org/reading-csv-file-java-using-opencsv/
 public static void readDataLineByLine(String file)
 {
-
 	try {
 		Scanner sc = new Scanner(new File(file));  
 		sc.useDelimiter(",");   //sets the delimiter pattern  
