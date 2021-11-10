@@ -40,7 +40,8 @@ public class downloader {
 				|| "application".equals(String_name)
 				|| "APPLICATION".equals(String_name)) {
 			// retrieve the url from website.csv file.
-			
+			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\src\\main\\java\\file.csv";
+			readDataLineByLine(readFile);			
 			
 			System.out.println("Retrieved url from external application");
 		}		
