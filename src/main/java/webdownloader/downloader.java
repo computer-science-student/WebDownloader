@@ -11,6 +11,7 @@ import com.opencsv.CSVReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.*;
+import java.lang.StringBuilder; // for converting html to text
 
 public class downloader {
 	public static String urlString;
@@ -40,7 +41,6 @@ public class downloader {
 		finally {
 	        //csvReader.close();
 			}
-
 	}
 		
 	
