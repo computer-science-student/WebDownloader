@@ -142,15 +142,7 @@ public class downloader {
 			// Make sure that the translated file actually exists or else there may be errors!
 			
 			File writer = new File("page.html"); // makes a File object of the page.html.
-			//File translated_page = new File("translated_page.html");
-			
-			// make a copy of the text or translate it here.
-			/*try {
-				Files.copy(writer.toPath(),translated_page.toPath());
-			}
-			catch(Exception e) {
-				//System.out.println("error");
-			}*/
+
 			System.out.println("Translated the web page.");
 			
 		} else if ("n".equals(translate_str) || "N".equals(translate_str) ||
