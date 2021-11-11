@@ -42,8 +42,7 @@ public class downloader {
 		finally {
 	        //csvReader.close();
 			}
-	}
-		
+	}		
 	
    public static void main(String args[]) throws IOException {
 	   // Creating BufferedReader Object
@@ -86,8 +85,8 @@ public class downloader {
 			    in.close();
 			} catch (IOException e) {
 			}
-			String content = contentBuilder.toString();
-			System.out.println(content);
+			content = contentBuilder.toString();
+			
 			
 			
 			//System.out.print(urlString);
