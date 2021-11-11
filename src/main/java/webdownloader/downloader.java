@@ -73,9 +73,6 @@ public class downloader {
 			// Download the webpage here
 			download(urlString);
 			
-
-			
-			
 			//System.out.print(urlString);
 			System.out.println("Retrieved url " + urlString + " from external application. Webpage downloaded.");
 		} else {
@@ -165,10 +162,6 @@ public class downloader {
 		}
 		// Maybe print out what the text on the webpage translated to??
 		
-		/* Sharing functionality no longer seems to be needed.
-		BufferedReader share = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Share webpage? Enter (y/n)");
-		String share_str = share.readLine();*/	
 		
    }
    public static void download(String urlString) throws IOException {
