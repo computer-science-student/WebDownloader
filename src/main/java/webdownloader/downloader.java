@@ -73,6 +73,22 @@ public class downloader {
 			// Download the webpage here
 			download(urlString);
 			
+			// Create string from page.html.
+			// Source: https://stackoverflow.com/questions/12035316/reading-entire-html-file-to-string
+			StringBuilder contentBuilder = new StringBuilder();
+			try {
+			    BufferedReader in = new BufferedReader(new FileReader("page.html"));
+			    String str;
+			    while ((str = in.readLine()) != null) {
+			        contentBuilder.append(str);
+			    }
+			    in.close();
+			} catch (IOException e) {
+			}
+			String content = contentBuilder.toString();
+			//System.out.println(content);
+			
+			
 			//System.out.print(urlString);
 			System.out.println("Retrieved url " + urlString + " from external application. Webpage downloaded.");
 		} else {
