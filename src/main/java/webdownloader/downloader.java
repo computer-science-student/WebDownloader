@@ -15,6 +15,7 @@ import java.lang.StringBuilder; // for converting html to text
 
 public class downloader {
 	public static String urlString;
+	public static String content;
 
 	// Java code to illustrate reading a
 	// CSV file line by line taken from here:
@@ -86,7 +87,7 @@ public class downloader {
 			} catch (IOException e) {
 			}
 			String content = contentBuilder.toString();
-			//System.out.println(content);
+			System.out.println(content);
 			
 			
 			//System.out.print(urlString);
@@ -136,7 +137,7 @@ public class downloader {
 		        ) {
 		            String[] headerRecord = {}; // No headerRecord
 
-		            csvWriter.writeNext(new String[]{"Original", "Hello!"});
+		            csvWriter.writeNext(new String[]{"Original", content});
 		            csvWriter.writeNext(new String[]{"Language", language_code});
 		        }
 			
