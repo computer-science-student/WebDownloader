@@ -1,6 +1,8 @@
 # WebDownloader
 WebDownloader downloads web pages.
 
+The code in the directory is not mine. It is from here: https://github.com/Haru825/CS361-Project/blob/main/myTranslate.py
+
 How to run:
 Clone this repository, and open it in Eclipse.
 To edit the source file, navigate to /src/main/java/webdownloader/downloader.java.
