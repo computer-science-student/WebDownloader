@@ -1,7 +1,7 @@
 # WebDownloader
 WebDownloader downloads web pages.
 
-The code in the directory is not mine. It is from here: https://github.com/Haru825/CS361-Project/blob/main/myTranslate.py
+The code in the directory /python-cs-361 is not mine. It is from here: https://github.com/Haru825/CS361-Project/blob/main/myTranslate.py
 
 How to run:
 Clone this repository, and open it in Eclipse.
