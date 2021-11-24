@@ -68,6 +68,7 @@ public class downloader {
 				|| "APPLICATION".equals(String_name)) {
 			// retrieve the url from website.csv file. Use to be src\\main\\java\\file.csv
 			// Hardcode the location of the website.csv to read.
+			// YOU WILL NEED TO CHANGE THIS LOCATION IN ORDER TO READ THE FILE.
 			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
 			readDataLineByLine(readFile);
 			// Download the webpage here
