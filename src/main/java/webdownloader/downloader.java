@@ -122,7 +122,7 @@ public class downloader {
 			// Get the text from webpage you downloaded!
 			
 			
-			// Now write the code to a cvs file.
+			// Now write the code to a csv file.
 			String translateFile = "python-cs-361\\file.csv";
 			try (
 		            Writer writer = Files.newBufferedWriter(Paths.get(translateFile));
