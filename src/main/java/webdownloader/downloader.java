@@ -132,9 +132,9 @@ public class downloader {
 		        }
 			
 			
-			// Make sure that the translated file actually exists or else there may be errors!
+			// If the translated file does not exist, there may be errors!
 			
-			File writer = new File("page.html"); // makes a File object of the page.html.
+			File writer = new File("page.html");
 
 			System.out.println("Translated the web page.");
 			
