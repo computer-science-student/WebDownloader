@@ -52,12 +52,7 @@ public class downloader {
 	   
 		// String reading internally
 		String String_name = BufferedReader_Name.readLine();
-		
-		//download(String_name);
-		//download("https://www.tutorialspoint.com");
-		//download("http://www.google.com");
-		//http://web.engr.oregonstate.edu/~liusus/cs361/project.html
-		
+				
 		// If user inputed "app" then read the url from the .csv file.
 		if ("app".equals(String_name) ||"APP".equals(String_name)
 				|| "application".equals(String_name)
