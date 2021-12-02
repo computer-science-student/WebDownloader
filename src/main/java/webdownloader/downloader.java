@@ -29,10 +29,7 @@ public class downloader {
 			{
 				if (sc.next().equals("website")) { // if we are reading in the website url
 					urlString = sc.next(); // set public string for url
-					//System.out.print(urlString);
-					//System.out.println("Hi");
 				}
-			//System.out.print(sc.next());  //find and returns the next complete token from this scanner  
 			}   
 			sc.close();  //closes the scanner
 		}
@@ -40,7 +37,6 @@ public class downloader {
 			e.printStackTrace();	
 		}
 		finally {
-	        //csvReader.close();
 			}
 	}		
 	
