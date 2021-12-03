@@ -110,9 +110,15 @@ public class downloader {
 	public static void translationPrompt(){
 	}
 	
-   public static void main(String args[]) throws IOException {
-	   saveWebPage();
-
+	public static void translateWebPage() {
+		
+		
+	}
+	
+	public static void main(String args[]) throws IOException {
+		saveWebPage();
+		translateWebPage();
+	   
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
 		System.out.println("If you choose to translate the webpage, you will be asked what language to translate it to.");
@@ -191,7 +197,7 @@ public class downloader {
          }
          System.out.println("Page downloaded as page.html to the directory of this application.\n");
          System.out.println("Warning: Next time you download a page, the new page you "
-         		+ "download will overwrite page.html if keep it in this directory.");
+         		+ "download will overwrite page.html if page.html is kept in the same directory.");
          System.out.println("Save page.html to another directory to save it permanently.\n");
       }
    }
