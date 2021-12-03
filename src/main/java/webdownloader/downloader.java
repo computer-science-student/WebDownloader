@@ -16,6 +16,15 @@ import java.lang.StringBuilder; // for converting html to text
 public class downloader {
 	public static String urlString;
 	public static String content;
+	
+	
+	public static void saveWebpage() {
+		// Prompts the user for webpage to download
+		// then downloads it.
+		
+		
+	}
+	
 
 	
    public static void main(String args[]) throws IOException {
