@@ -1,6 +1,5 @@
 package webdownloader;
 // The way to download a webpage was taken from here: https://www.tutorialspoint.com/Download-webpage-in-Java
-// The way I took input in from the user was taken from here: (TODO add credit here later).
 import java.net.URL;
 // import modules for copying file.
 import java.nio.file.Files;
