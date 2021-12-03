@@ -99,8 +99,16 @@ public class downloader {
 			return false;
 			}
 	}
+	
+	// If a user wants a webpage downloaded, languagePrompt is
+	// called to retrieve the language the user wants. Returns a string of
+	// the language the user wants the webpage translated to.
+	public static void languagePrompt(){}
 
-	public static void something(){}
+	// translationPrompt asks the user if they want
+	// the webpage they downloaded to be translated.
+	public static void translationPrompt(){
+	}
 	
    public static void main(String args[]) throws IOException {
 	   saveWebPage();
