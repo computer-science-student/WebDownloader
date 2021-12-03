@@ -121,11 +121,13 @@ public class downloader {
 	// languageCodePrompt() asks the user for the language code
 	// of the langauge they want to translate a webpage to.
 	// Returns the language code.
-	public static String languageCodePrompt() {
+	public static String languageCodePrompt() throws IOException {
+		// Read another prompt from the user
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
-		String language_code = translate.readLine();
+		String languageCode = translate.readLine();
 		
-		System.out.println("You chose to translate to: " + language_code);
+		System.out.println("You chose to translate to: " + languageCode);
+		return languageCode;
 		
 	}
 	
