@@ -195,32 +195,7 @@ public class downloader {
 		if ("y".equals(translate_str) || "Y".equals(translate_str)
 				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
 
-			// Get the text from webpage you downloaded!
-			
-			
-			// Now write the code to a csv file.
-			String translateFile = "python-cs-361\\file.csv";
-			try (
-		            Writer writer = Files.newBufferedWriter(Paths.get(translateFile));
 
-		            CSVWriter csvWriter = new CSVWriter(writer,
-		                    CSVWriter.DEFAULT_SEPARATOR,
-		                    CSVWriter.NO_QUOTE_CHARACTER,
-		                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
-		                    CSVWriter.DEFAULT_LINE_END);
-		        ) {
-		            String[] headerRecord = {}; // No headerRecord
-
-		            csvWriter.writeNext(new String[]{"Original", content});
-		            csvWriter.writeNext(new String[]{"Language", language_code});
-		        }
-			
-			
-			// If the translated file does not exist, there may be errors!
-			
-			File writer = new File("page.html");
-
-			System.out.println("Translated the web page.");
 			
 		} else if ("n".equals(translate_str) || "N".equals(translate_str) ||
 				"no".equals(translate_str) || "NO".equals(translate_str)) {
