@@ -15,7 +15,6 @@ import java.lang.StringBuilder; // for converting html to text
 public class downloader {
 	public static String urlString;
 	public static String content;
-	
 
 	// Helper function for saveWebPage
 	// Reads user's commands, returns the command back as a string.
@@ -56,14 +55,28 @@ public class downloader {
 	
 	// Writes the downloaded webpage to the hard drive.
 	// Helper function for saveWebPage.
-	public static void writePage() {}
+	public static void writePage() {
+		// Create string from page.html. Write the file.
+		// Source: https://stackoverflow.com/questions/12035316/reading-entire-html-file-to-string
+		StringBuilder contentBuilder = new StringBuilder();
+		try {
+		    BufferedReader in = new BufferedReader(new FileReader("page.html"));
+		    String str;
+		    while ((str = in.readLine()) != null) {
+		        contentBuilder.append(str);
+		    }
+		    in.close();
+		} catch (IOException e) {
+		}
+		content = contentBuilder.toString();
+	}
 	
 	
 	// Prompts the user for webpage to download then downloads it.
 	public static void saveWebPage() {
 		try {
-			//System.out.println(downloadPrompt());
 			chooseDownload(downloadPrompt());
+			writePage();
 		} catch (IOException e) {
 			System.out.println("Failed to read user's webpage.");
 			e.printStackTrace();
@@ -94,25 +107,7 @@ public class downloader {
 	
    public static void main(String args[]) throws IOException {
 	   saveWebPage();
-			
-		
-		// Create string from page.html. Write the file.
-		// Source: https://stackoverflow.com/questions/12035316/reading-entire-html-file-to-string
-		StringBuilder contentBuilder = new StringBuilder();
-		try {
-		    BufferedReader in = new BufferedReader(new FileReader("page.html"));
-		    String str;
-		    while ((str = in.readLine()) != null) {
-		        contentBuilder.append(str);
-		    }
-		    in.close();
-		} catch (IOException e) {
-		}
-		content = contentBuilder.toString();
-		
-		
-		
-		
+
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
 		System.out.println("If you choose to translate the webpage, you will be asked what language to translate it to.");
