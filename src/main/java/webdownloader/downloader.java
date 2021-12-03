@@ -131,8 +131,7 @@ public class downloader {
 		translateWebPage();
 	   
 		
-		// If user inputed "y" char, then make a copy of the of the file in the directory
-		// and rename it translated_page.html.
+
 		if ("y".equals(translate_str) || "Y".equals(translate_str)
 				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
 			/*
