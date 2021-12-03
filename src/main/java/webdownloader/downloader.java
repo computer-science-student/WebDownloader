@@ -195,21 +195,7 @@ public class downloader {
 	
 	public static void main(String args[]) throws IOException {
 		saveWebPage();
-		translateWebPage();
-	   
-		/*
-		if ("y".equals(translate_str) || "Y".equals(translate_str)
-				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
-			
-		} else if ("n".equals(translate_str) || "N".equals(translate_str) ||
-				"no".equals(translate_str) || "NO".equals(translate_str)) {
-			System.out.println("You decided not to translate the webpage.");
-			
-		} else {
-			System.out.println("Text not recognized. Not translating the webpage.");
-		}*/
-		
-		
+		translateWebPage();		
    }
    public static void download(String urlString) throws IOException {
       URL url = new URL(urlString);
