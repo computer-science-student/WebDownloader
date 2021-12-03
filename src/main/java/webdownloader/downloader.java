@@ -23,14 +23,11 @@ public class downloader {
 		// then downloads it.
 		
 		
+		
 	}
 	
-
-	
    public static void main(String args[]) throws IOException {
-	   // Creating BufferedReader Object
-	   // InputStreamReader converts bytes to
-	   // stream of character
+	   // Creating BufferedReader Object to read user's command.
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   	      
 	   // Asking for input from user
