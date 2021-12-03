@@ -94,6 +94,9 @@ public class downloader {
 			download(String_name);
 		}
 		
+		
+		
+		
 		// Create string from page.html.
 		// Source: https://stackoverflow.com/questions/12035316/reading-entire-html-file-to-string
 		StringBuilder contentBuilder = new StringBuilder();
