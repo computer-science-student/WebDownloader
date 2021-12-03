@@ -17,11 +17,10 @@ public class downloader {
 	public static String urlString;
 	public static String content;
 	
-	
-	public static String downloadPrompt() throws IOException {
-		// Helper function for saveWebPage
-		// Reads user's commands, returns the command back as a string.
-		
+
+	// Helper function for saveWebPage
+	// Reads user's commands, returns the command back as a string.
+	public static String downloadPrompt() throws IOException {	
 		// Creating BufferedReader Object to read user's command.
 		BufferedReader websiteToDownload = new BufferedReader(new InputStreamReader(System.in));
 		// Asking for input from user
@@ -32,9 +31,8 @@ public class downloader {
 		
 	}
 	
+	// Prompts the user for webpage to download then downloads it.
 	public static void saveWebPage() {
-		// Prompts the user for webpage to download
-		// then downloads it.
 		try {
 			//String userDownloadPrompt = downloadPrompt(); // gets prompt from user.
 			System.out.println("saveWebPage called.");
@@ -43,9 +41,7 @@ public class downloader {
 			System.out.println("Failed to read user's webpage.");
 			e.printStackTrace();
 		}
-		
-		
-		
+
 	}
 	
    public static void main(String args[]) throws IOException {
