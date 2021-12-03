@@ -28,7 +28,6 @@ public class downloader {
 		System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
 		// Return user's input.
 		return websiteToDownload.readLine();
-		
 	}
 	
 	// Downloads the webpage the user wanted. Helper function for saveWebPage.
@@ -45,27 +44,27 @@ public class downloader {
 			// Retrieve the url from website.csv file. Microservice generates website.csv.
 			
 			// Hard-code the location of the website.csv to read.
-			// YOU WILL NEED TO CHANGE THIS LOCATION IN ORDER TO READ THE FILE.
+			// WARNING: YOU WILL NEED TO CHANGE THIS LOCATION IN ORDER TO READ THE FILE.
 			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
 			readDataLineByLine(readFile);
 			// Download the webpage here
 			download(urlString);
-			
-			//System.out.print(urlString);
-			System.out.println("Retrieved url " + urlString + " from external application. Webpage downloaded.");
+			System.out.println("Retrieved url " + urlString + 
+					" from external application. Webpage downloaded.");
 		} else {
 			// if the string is not app then download the webpage!
-			download(downloadChosen);
-		}
-		
-		
-	}
+			download(downloadChosen); }}
+	
+	// Writes the downloaded webpage to the hard drive.
+	// Helper function for saveWebPage.
+	public static void writePage() {}
 	
 	
 	// Prompts the user for webpage to download then downloads it.
 	public static void saveWebPage() {
 		try {
-			System.out.println(downloadPrompt());
+			//System.out.println(downloadPrompt());
+			chooseDownload(downloadPrompt());
 		} catch (IOException e) {
 			System.out.println("Failed to read user's webpage.");
 			e.printStackTrace();
