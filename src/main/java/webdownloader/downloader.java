@@ -23,18 +23,24 @@ public class downloader {
 		// Reads user's commands, returns the command back as a string.
 		
 		// Creating BufferedReader Object to read user's command.
-		BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader websiteToDownload = new BufferedReader(new InputStreamReader(System.in));
 		// Asking for input from user
 		System.out.println("Save Webpage locally. Enter the full URL:");
 		System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
 		// Return user's input.
-		return BufferedReader_Name.readLine();
+		return websiteToDownload.readLine();
 		
 	}
 	
 	public static void saveWebPage() {
 		// Prompts the user for webpage to download
 		// then downloads it.
+		try {
+			downloadPrompt();
+		} catch (IOException e) {
+			System.out.println("Failed to read user's webpage.");
+			e.printStackTrace();
+		}
 		System.out.println("saveWebPage called");
 		
 		
@@ -43,6 +49,8 @@ public class downloader {
 	
    public static void main(String args[]) throws IOException {
 	   saveWebPage();
+	   
+	   /*
 	   // Creating BufferedReader Object to read user's command.
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   	      
@@ -51,7 +59,8 @@ public class downloader {
 	   System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
 	   
 		// String reading internally
-		String String_name = BufferedReader_Name.readLine();
+		String String_name = BufferedReader_Name.readLine();*/
+	   String String_name = "yes";
 				
 		// If user inputed "app" then read the url from the .csv file.
 		if ("app".equals(String_name) ||"APP".equals(String_name)
