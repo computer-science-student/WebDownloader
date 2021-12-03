@@ -31,6 +31,12 @@ public class downloader {
 		
 	}
 	
+	// Downloads the webpage the user wanted.
+	// If user typed in app, read the URL from the microservice.
+	// If not, then download whatever URL the user wants.
+	public static void chooseDownload() {}
+	
+	
 	// Prompts the user for webpage to download then downloads it.
 	public static void saveWebPage() {
 		try {
@@ -41,6 +47,9 @@ public class downloader {
 		}
 
 	}
+	
+	
+	
 	
     // Checks if the user wants to translate the page.
     // Returns true if they want to translate; false otherwise.
