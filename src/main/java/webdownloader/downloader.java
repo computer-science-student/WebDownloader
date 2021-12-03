@@ -1,5 +1,6 @@
 package webdownloader;
-// The way to download a webpage was taken from here: https://www.tutorialspoint.com/Download-webpage-in-Java
+// The way to download a webpage was taken from
+// here: https://www.tutorialspoint.com/Download-webpage-in-Java
 import java.net.URL;
 // import modules for copying file.
 import java.nio.file.Files;
@@ -23,7 +24,8 @@ public class downloader {
 		BufferedReader websiteToDownload = new BufferedReader(new InputStreamReader(System.in));
 		// Asking for input from user
 		System.out.println("Save Webpage locally. Enter the full URL:");
-		System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
+		System.out.println("Or type in \"app\" without qoutes to retrieve "
+				+ "the URL from another, external application.");
 		// Return user's input.
 		return websiteToDownload.readLine();
 	}
@@ -52,7 +54,7 @@ public class downloader {
 		} else { // If the string is not app then download the webpage!
 			download(downloadChosen); }}
 	
-	// Writes the downloaded webpage to the hard drive.
+	// Writes the downloaded webpage to the drive.
 	// Helper function for saveWebPage.
 	public static void writePage() {
 		// Create string from page.html. Write the file.
@@ -99,14 +101,6 @@ public class downloader {
 			}
 	}
 	
-	// If a user wants a webpage downloaded, languagePrompt is
-	// called to retrieve the language the user wants. Returns a string of
-	// the language the user wants the webpage translated to.
-	public static void languagePrompt(){
-		
-		
-	}
-
 	// translationPrompt() asks the user if they want
 	// the webpage they downloaded to be translated.
 	// Returns the user's answer.
