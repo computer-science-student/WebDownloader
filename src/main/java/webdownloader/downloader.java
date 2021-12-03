@@ -17,28 +17,6 @@ public class downloader {
 	public static String urlString;
 	public static String content;
 
-	// Java code to illustrate reading a
-	// CSV file line by line taken from here:
-	// https://www.geeksforgeeks.org/reading-csv-file-java-using-opencsv/
-	public static void readDataLineByLine(String file)
-	{
-		try {
-			Scanner sc = new Scanner(new File(file));  
-			sc.useDelimiter(",");   //sets the delimiter pattern  
-			while (sc.hasNext())  //returns a boolean value  
-			{
-				if (sc.next().equals("website")) { // if we are reading in the website url
-					urlString = sc.next(); // set public string for url
-				}
-			}   
-			sc.close();  //closes the scanner
-		}
-		catch (Exception e) {
-			e.printStackTrace();	
-		}
-		finally {
-			}
-	}		
 	
    public static void main(String args[]) throws IOException {
 	   // Creating BufferedReader Object
@@ -168,6 +146,30 @@ public class downloader {
          System.out.println("Save page.html to another directory to save it permanently.\n");
       }
    }
+   
+   
+	// Java code to illustrate reading a
+	// CSV file line by line taken from here:
+	// https://www.geeksforgeeks.org/reading-csv-file-java-using-opencsv/
+	public static void readDataLineByLine(String file)
+	{
+		try {
+			Scanner sc = new Scanner(new File(file));  
+			sc.useDelimiter(",");   //sets the delimiter pattern  
+			while (sc.hasNext())  //returns a boolean value  
+			{
+				if (sc.next().equals("website")) { // if we are reading in the website url
+					urlString = sc.next(); // set public string for url
+				}
+			}   
+			sc.close();  //closes the scanner
+		}
+		catch (Exception e) {
+			e.printStackTrace();	
+		}
+		finally {
+			}
+	}
    
    
 }
