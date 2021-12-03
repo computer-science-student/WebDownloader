@@ -122,6 +122,7 @@ public class downloader {
 	// of the langauge they want to translate a webpage to.
 	// Returns the language code.
 	public static String languageCodePrompt() {
+		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
 		String language_code = translate.readLine();
 		
 		System.out.println("You chose to translate to: " + language_code);
