@@ -31,10 +31,35 @@ public class downloader {
 		
 	}
 	
-	// Downloads the webpage the user wanted.
+	// Downloads the webpage the user wanted. Helper function for saveWebPage.
 	// If user typed in app, read the URL from the microservice.
 	// If not, then download whatever URL the user wants.
-	public static void chooseDownload() {}
+	// WARNING: Hard-coded location will need to be changed in this function!
+	// Please change it to the directory of your choosing!
+	public static void chooseDownload(String downloadChosen) throws IOException {
+		
+		// If user inputed "app" then read the url from the .csv file.
+		if ("app".equals(downloadChosen) ||"APP".equals(downloadChosen)
+				|| "application".equals(downloadChosen)
+				|| "APPLICATION".equals(downloadChosen)) {
+			// Retrieve the url from website.csv file. Microservice generates website.csv.
+			
+			// Hard-code the location of the website.csv to read.
+			// YOU WILL NEED TO CHANGE THIS LOCATION IN ORDER TO READ THE FILE.
+			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
+			readDataLineByLine(readFile);
+			// Download the webpage here
+			download(urlString);
+			
+			//System.out.print(urlString);
+			System.out.println("Retrieved url " + urlString + " from external application. Webpage downloaded.");
+		} else {
+			// if the string is not app then download the webpage!
+			download(downloadChosen);
+		}
+		
+		
+	}
 	
 	
 	// Prompts the user for webpage to download then downloads it.
@@ -81,7 +106,7 @@ public class downloader {
 	   System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
 	   
 		// String reading internally
-		String String_name = BufferedReader_Name.readLine();*/
+		String String_name = BufferedReader_Name.readLine();
 	   String String_name = "yes";
 				
 		// If user inputed "app" then read the url from the .csv file.
@@ -102,7 +127,7 @@ public class downloader {
 			// if the string is not app then download the webpage!
 			download(String_name);
 		}
-		
+		*/
 		
 		
 		
