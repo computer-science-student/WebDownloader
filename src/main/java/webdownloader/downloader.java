@@ -159,12 +159,31 @@ public class downloader {
 			// Take language code from the user.
 			String languageCode = languageCodePrompt();
 			
+			// Write the language code to the csv file.
+			String translateFile = "python-cs-361\\file.csv";
+			try (
+		            Writer writer = Files.newBufferedWriter(Paths.get(translateFile));
+
+		            CSVWriter csvWriter = new CSVWriter(writer,
+		                    CSVWriter.DEFAULT_SEPARATOR,
+		                    CSVWriter.NO_QUOTE_CHARACTER,
+		                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+		                    CSVWriter.DEFAULT_LINE_END);
+		        ) {
+		            String[] headerRecord = {}; // No headerRecord
+
+		            csvWriter.writeNext(new String[]{"Original", content});
+		            csvWriter.writeNext(new String[]{"Language", language_code});
+		        }
+			// If the translated file does not exist, there may be errors!
+			
+			File writer = new File("page.html");
+
+			System.out.println("Translated the web page.");
 			
 			
-		}
-		
-		
-		
+
+		}	
 	}
 	
 	public static void main(String args[]) throws IOException {
