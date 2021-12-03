@@ -173,20 +173,20 @@ public class downloader {
 		            String[] headerRecord = {}; // No headerRecord
 
 		            csvWriter.writeNext(new String[]{"Original", content});
-		            csvWriter.writeNext(new String[]{"Language", language_code});
+		            csvWriter.writeNext(new String[]{"Language", languageCode});
 		        }
 			// If the translated file does not exist, there may be errors!
 			
 			File writer = new File("page.html");
 
 			System.out.println("Translated the web page.");
-		} else if ("n".equals(translate_str) || "N".equals(translate_str) ||
-				"no".equals(translate_str) || "NO".equals(translate_str)) {
+		} else if ("n".equals(translateStr) || "N".equals(translateStr) ||
+				"no".equals(translateStr) || "NO".equals(translateStr)) {
 			System.out.println("You decided not to translate the webpage.");
 			
 		} else {
 			System.out.println("Text not recognized. Not translating the webpage.");
-		} 
+		}
 		
 		
 		
