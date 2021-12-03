@@ -121,7 +121,6 @@ public class downloader {
 		
 		System.out.println("You chose to translate to: " + languageCode);
 		return languageCode;
-		
 	}
 	
 	// Prints a prompt of text to inform the user of
@@ -185,11 +184,20 @@ public class downloader {
 			System.out.println("Text not recognized. Not translating the webpage.");
 		}		
 	}
-	
+
 	public static void main(String args[]) throws IOException {
 		saveWebPage();
 		translateWebPage();		
    }
+	// prints out text that helps the download(String urlString) function.
+	public static void printDownloadText() {
+		//
+        System.out.println("Page downloaded as page.html to the directory of this application.\n");
+        System.out.println("Warning: Next time you download a page, the new page you "
+        		+ "download will overwrite page.html if page.html is kept in the same directory.");
+        System.out.println("Save page.html to another directory to save it permanently.\n");		
+	}
+	
    public static void download(String urlString) throws IOException {
       URL url = new URL(urlString);
       try(
@@ -200,10 +208,7 @@ public class downloader {
          while ((line = reader.readLine()) != null) {
             writer.write(line);
          }
-         System.out.println("Page downloaded as page.html to the directory of this application.\n");
-         System.out.println("Warning: Next time you download a page, the new page you "
-         		+ "download will overwrite page.html if page.html is kept in the same directory.");
-         System.out.println("Save page.html to another directory to save it permanently.\n");
+         printDownloadText();
       }
    }
    
