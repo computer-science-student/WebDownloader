@@ -18,7 +18,7 @@ public class downloader {
 	public static String content;
 	
 	
-	public static void downloadPrompt() {
+	public static String downloadPrompt() throws IOException {
 		// Helper function for saveWebPage
 		// Reads user's commands, returns the command back as a string.
 		
@@ -28,6 +28,7 @@ public class downloader {
 		System.out.println("Save Webpage locally. Enter the full URL:");
 		System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
 		// Return user's input.
+		return BufferedReader_Name.readLine();
 		
 	}
 	
