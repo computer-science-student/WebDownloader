@@ -49,8 +49,7 @@ public class downloader {
 			download(urlString);
 			System.out.println("Retrieved url " + urlString + 
 					" from external application. Webpage downloaded.");
-		} else {
-			// if the string is not app then download the webpage!
+		} else { // If the string is not app then download the webpage!
 			download(downloadChosen); }}
 	
 	// Writes the downloaded webpage to the hard drive.
