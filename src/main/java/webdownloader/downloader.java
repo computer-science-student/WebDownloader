@@ -118,10 +118,47 @@ public class downloader {
 		return translate.readLine();
 	}
 	
+	// languageCodePrompt() asks the user for the language code
+	// of the langauge they want to translate a webpage to.
+	// Returns the language code.
+	public static String languageCodePrompt() {
+		String language_code = translate.readLine();
+		
+		System.out.println("You chose to translate to: " + language_code);
+		
+	}
+	
+	// Prints a prompt of text to inform the user of
+	// how translation works.
+	public static void printTranslationText() {
+		System.out.println("What language would you like to translate to?");
+		System.out.println("Please use the codes seen here: "
+				+ "https://cloud.google.com/translate/docs/languages to find the language code,"
+				+ " and enter the code for the language you want to translate.");
+		System.out.println("For example, if you want to translate to Chinese "
+				+ "enter zh-TW or if you want to translate to Spanish enter es.");
+		System.out.println("Failure to enter the correct code in this program"
+				+ " will result in no translation or the wrong translation.");		
+	}
+	
 	// TranslateWebPage asks the user if they want to translate the webpage,
 	// then follows the user's command.
 	public static void translateWebPage() throws IOException {
-		translationPrompt();
+		String translateStr = translationPrompt();
+		
+		// If the user wants to translate the webpage...
+		if ("y".equals(translateStr) || "Y".equals(translateStr)
+				|| "yes".equals(translateStr) || "YES".equals(translateStr)) {
+			// If page.html is not in the directory, then the following code my cause errors.
+			// If the user wants to translate, ask the user what language they want to translate to.
+			printTranslationText();
+			
+			// Take language code from the user.
+			
+			
+			
+		}
+		
 		
 		
 	}
@@ -134,23 +171,12 @@ public class downloader {
 
 		if ("y".equals(translate_str) || "Y".equals(translate_str)
 				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
-			/*
-			 * I watched this Youtube Tutorial: https://www.youtube.com/watch?v=R9Bmz-9ZAJM
-			 * to learn how to copy a file. The following code assumes the user generated page.html
-			 * correctly, and it makes a copy of the file to the same directory (the directory of
-			 * this project).
-			 */
-			// If the user wants to translate, ask the user what language they want to translate to.
-			System.out.println("What language would you like to translate to?");
-			System.out.println("Please use the codes seen here: "
-					+ "https://cloud.google.com/translate/docs/languages to find the language code,"
-					+ " and enter the code for the language you want to translate.");
-			System.out.println("For example, if you want to translate to Chinese "
-					+ "enter zh-TW or if you want to translate to Spanish enter es.");
-			System.out.println("Failure to enter the correct code in this program"
-					+ " will result in no translation or the wrong translation.");
+
+
 			
-			// take code from user
+			
+			
+			// Take language code from the user.
 			String language_code = translate.readLine();
 			
 			System.out.println("You chose to translate to: " + language_code);
