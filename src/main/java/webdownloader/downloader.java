@@ -31,6 +31,17 @@ public class downloader {
 		
 	}
 	
+	// Prompts the user for webpage to download then downloads it.
+	public static void saveWebPage() {
+		try {
+			System.out.println(downloadPrompt());
+		} catch (IOException e) {
+			System.out.println("Failed to read user's webpage.");
+			e.printStackTrace();
+		}
+
+	}
+	
     // Checks if the user wants to translate the page.
     // Returns true if they want to translate; false otherwise.
 	public static boolean checkIfTranslation(String translateStr){
@@ -47,19 +58,6 @@ public class downloader {
 			System.out.println("Text not recognized. Not translating the webpage.");
 			return false;
 		}
-	}
-	
-	// Prompts the user for webpage to download then downloads it.
-	public static void saveWebPage() {
-		try {
-			//String userDownloadPrompt = downloadPrompt(); // gets prompt from user.
-			System.out.println("saveWebPage called.");
-			System.out.println(downloadPrompt());
-		} catch (IOException e) {
-			System.out.println("Failed to read user's webpage.");
-			e.printStackTrace();
-		}
-
 	}
 	
    public static void main(String args[]) throws IOException {
