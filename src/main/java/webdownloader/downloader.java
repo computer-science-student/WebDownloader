@@ -36,9 +36,9 @@ public class downloader {
 		// Prompts the user for webpage to download
 		// then downloads it.
 		try {
-			String userDownloadPrompt = downloadPrompt(); // gets prompt from user.
+			//String userDownloadPrompt = downloadPrompt(); // gets prompt from user.
 			System.out.println("saveWebPage called.");
-			System.out.println(userDownloadPrompt);
+			System.out.println(downloadPrompt());
 		} catch (IOException e) {
 			System.out.println("Failed to read user's webpage.");
 			e.printStackTrace();
