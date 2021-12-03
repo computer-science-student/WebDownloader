@@ -144,6 +144,37 @@ public class downloader {
 				+ " will result in no translation or the wrong translation.");		
 	}
 	
+	// Helps translateWebPage() send a translation request to microservice.
+	public static void sendTranslationRequest() throws IOException {
+		// If page.html is not in the directory, then the following code my cause errors.
+		// If the user wants to translate, ask the user what language they want to translate to.
+		printTranslationText();
+		// Take language code from the user.
+		String languageCode = languageCodePrompt();
+		// Write the language code to the csv file.
+		String translateFile = "python-cs-361\\file.csv";
+		try (
+	            Writer writer = Files.newBufferedWriter(Paths.get(translateFile));
+
+	            CSVWriter csvWriter = new CSVWriter(writer,
+	                    CSVWriter.DEFAULT_SEPARATOR,
+	                    CSVWriter.NO_QUOTE_CHARACTER,
+	                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
+	                    CSVWriter.DEFAULT_LINE_END);
+	        ) {
+	            String[] headerRecord = {}; // No headerRecord
+
+	            csvWriter.writeNext(new String[]{"Original", content});
+	            csvWriter.writeNext(new String[]{"Language", languageCode});
+	        }
+		// If the translated file does not exist, there may be errors!
+		
+		File writer = new File("page.html");
+
+		System.out.println("Translation request sent.");
+
+	}
+	
 	// TranslateWebPage asks the user if they want to translate the webpage,
 	// then follows the user's command.
 	public static void translateWebPage() throws IOException {
@@ -152,44 +183,14 @@ public class downloader {
 		// If the user wants to translate the webpage...
 		if ("y".equals(translateStr) || "Y".equals(translateStr)
 				|| "yes".equals(translateStr) || "YES".equals(translateStr)) {
-			// If page.html is not in the directory, then the following code my cause errors.
-			// If the user wants to translate, ask the user what language they want to translate to.
-			printTranslationText();
-			
-			// Take language code from the user.
-			String languageCode = languageCodePrompt();
-			
-			// Write the language code to the csv file.
-			String translateFile = "python-cs-361\\file.csv";
-			try (
-		            Writer writer = Files.newBufferedWriter(Paths.get(translateFile));
-
-		            CSVWriter csvWriter = new CSVWriter(writer,
-		                    CSVWriter.DEFAULT_SEPARATOR,
-		                    CSVWriter.NO_QUOTE_CHARACTER,
-		                    CSVWriter.DEFAULT_ESCAPE_CHARACTER,
-		                    CSVWriter.DEFAULT_LINE_END);
-		        ) {
-		            String[] headerRecord = {}; // No headerRecord
-
-		            csvWriter.writeNext(new String[]{"Original", content});
-		            csvWriter.writeNext(new String[]{"Language", languageCode});
-		        }
-			// If the translated file does not exist, there may be errors!
-			
-			File writer = new File("page.html");
-
-			System.out.println("Translated the web page.");
+			sendTranslationRequest();
 		} else if ("n".equals(translateStr) || "N".equals(translateStr) ||
 				"no".equals(translateStr) || "NO".equals(translateStr)) {
 			System.out.println("You decided not to translate the webpage.");
 			
 		} else {
 			System.out.println("Text not recognized. Not translating the webpage.");
-		}
-		
-		
-		
+		}		
 	}
 	
 	public static void main(String args[]) throws IOException {
