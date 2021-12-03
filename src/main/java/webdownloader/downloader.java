@@ -71,7 +71,6 @@ public class downloader {
 		content = contentBuilder.toString();
 	}
 	
-	
 	// Prompts the user for webpage to download then downloads it.
 	public static void saveWebPage() {
 		try {
@@ -80,11 +79,7 @@ public class downloader {
 		} catch (IOException e) {
 			System.out.println("Failed to read user's webpage.");
 			e.printStackTrace();
-		}
-
-	}
-	
-	
+		}}
 	
 	
     // Checks if the user wants to translate the page.
@@ -102,8 +97,10 @@ public class downloader {
 		else {
 			System.out.println("Text not recognized. Not translating the webpage.");
 			return false;
-		}
+			}
 	}
+
+	public static void something(){}
 	
    public static void main(String args[]) throws IOException {
 	   saveWebPage();
