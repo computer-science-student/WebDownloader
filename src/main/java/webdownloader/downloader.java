@@ -97,7 +97,7 @@ public class downloader {
 		
 		
 		
-		// Create string from page.html.
+		// Create string from page.html. Write the file.
 		// Source: https://stackoverflow.com/questions/12035316/reading-entire-html-file-to-string
 		StringBuilder contentBuilder = new StringBuilder();
 		try {
@@ -110,6 +110,9 @@ public class downloader {
 		} catch (IOException e) {
 		}
 		content = contentBuilder.toString();
+		
+		
+		
 		
 		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
