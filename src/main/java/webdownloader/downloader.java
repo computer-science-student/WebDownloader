@@ -31,6 +31,24 @@ public class downloader {
 		
 	}
 	
+    // Checks if the user wants to translate the page.
+    // Returns true if they want to translate; false otherwise.
+	public static boolean checkIfTranslation(String translateStr){
+		if ("y".equals(translate_str) || "Y".equals(translate_str)
+				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
+			return 1;
+		}
+		else if ("n".equals(translate_str) || "N".equals(translate_str) ||
+				"no".equals(translate_str) || "NO".equals(translate_str)) {
+			System.out.println("You decided not to translate the webpage.");
+			return 0;
+		}
+		else {
+			System.out.println("Text not recognized. Not translating the webpage.");
+			return 0;
+		}
+	}
+	
 	// Prompts the user for webpage to download then downloads it.
 	public static void saveWebPage() {
 		try {
