@@ -41,9 +41,9 @@ public class downloader {
 				|| "APPLICATION".equals(downloadChosen)) {
 			// Retrieve the url from website.csv file. Microservice generates website.csv.
 			
-			// Hard-code the location of the website.csv to read.
-			// WARNING: YOU WILL NEED TO CHANGE THIS LOCATION IN ORDER TO READ THE FILE.
-			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
+			// This will give errors if website.csv is NOT located in python-cs-361.
+			String readFile = "python-cs-361\\website.csv";
+			
 			readDataLineByLine(readFile);
 			// Download the webpage here
 			download(urlString);
