@@ -103,14 +103,25 @@ public class downloader {
 	// If a user wants a webpage downloaded, languagePrompt is
 	// called to retrieve the language the user wants. Returns a string of
 	// the language the user wants the webpage translated to.
-	public static void languagePrompt(){}
+	public static void languagePrompt(){
+		
+		
+	}
 
-	// translationPrompt asks the user if they want
+	// translationPrompt() asks the user if they want
 	// the webpage they downloaded to be translated.
-	public static void translationPrompt(){
+	// Returns the user's answer.
+	public static String translationPrompt() throws IOException {
+		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
+		System.out.println("If you choose to translate the webpage, you will be asked what language to translate it to.");
+		return translate.readLine();
 	}
 	
-	public static void translateWebPage() {
+	// TranslateWebPage asks the user if they want to translate the webpage,
+	// then follows the user's command.
+	public static void translateWebPage() throws IOException {
+		translationPrompt();
 		
 		
 	}
@@ -119,10 +130,6 @@ public class downloader {
 		saveWebPage();
 		translateWebPage();
 	   
-		BufferedReader translate = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Translate the webpage? (Must have webpage downloaded). Enter (y/n)");
-		System.out.println("If you choose to translate the webpage, you will be asked what language to translate it to.");
-		String translate_str = translate.readLine();
 		
 		// If user inputed "y" char, then make a copy of the of the file in the directory
 		// and rename it translated_page.html.
