@@ -18,15 +18,30 @@ public class downloader {
 	public static String content;
 	
 	
-	public static void saveWebpage() {
+	public static void downloadPrompt() {
+		// Helper function for saveWebPage
+		// Reads user's commands, returns the command back as a string.
+		
+		// Creating BufferedReader Object to read user's command.
+		BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
+		// Asking for input from user
+		System.out.println("Save Webpage locally. Enter the full URL:");
+		System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
+		// Return user's input.
+		
+	}
+	
+	public static void saveWebPage() {
 		// Prompts the user for webpage to download
 		// then downloads it.
+		System.out.println("saveWebPage called");
 		
 		
 		
 	}
 	
    public static void main(String args[]) throws IOException {
+	   saveWebPage();
 	   // Creating BufferedReader Object to read user's command.
 	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
 	   	      
