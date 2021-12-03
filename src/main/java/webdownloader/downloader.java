@@ -95,40 +95,7 @@ public class downloader {
 	
    public static void main(String args[]) throws IOException {
 	   saveWebPage();
-	   
-	   /*
-	   // Creating BufferedReader Object to read user's command.
-	   BufferedReader BufferedReader_Name = new BufferedReader(new InputStreamReader(System.in));
-	   	      
-	   // Asking for input from user
-	   System.out.println("Save Webpage locally. Enter the full URL:");
-	   System.out.println("Or type in \"app\" without qoutes to retrieve the URL from another, external application.");
-	   
-		// String reading internally
-		String String_name = BufferedReader_Name.readLine();
-	   String String_name = "yes";
-				
-		// If user inputed "app" then read the url from the .csv file.
-		if ("app".equals(String_name) ||"APP".equals(String_name)
-				|| "application".equals(String_name)
-				|| "APPLICATION".equals(String_name)) {
-			// retrieve the url from website.csv file. Use to be src\\main\\java\\file.csv
-			// Hardcode the location of the website.csv to read.
-			// YOU WILL NEED TO CHANGE THIS LOCATION IN ORDER TO READ THE FILE.
-			String readFile = "C:\\Users\\jl\\Documents\\University\\Fall 2021\\CS 361\\project\\WebDownloader1 - Try4 - GUI\\python-cs-361\\website.csv";
-			readDataLineByLine(readFile);
-			// Download the webpage here
-			download(urlString);
 			
-			//System.out.print(urlString);
-			System.out.println("Retrieved url " + urlString + " from external application. Webpage downloaded.");
-		} else {
-			// if the string is not app then download the webpage!
-			download(String_name);
-		}
-		*/
-		
-		
 		
 		// Create string from page.html. Write the file.
 		// Source: https://stackoverflow.com/questions/12035316/reading-entire-html-file-to-string
