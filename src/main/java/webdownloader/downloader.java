@@ -157,6 +157,7 @@ public class downloader {
 			printTranslationText();
 			
 			// Take language code from the user.
+			String languageCode = languageCodePrompt();
 			
 			
 			
@@ -175,14 +176,6 @@ public class downloader {
 		if ("y".equals(translate_str) || "Y".equals(translate_str)
 				|| "yes".equals(translate_str) || "YES".equals(translate_str)) {
 
-
-			
-			
-			
-			// Take language code from the user.
-			String language_code = translate.readLine();
-			
-			System.out.println("You chose to translate to: " + language_code);
 			// Get the text from webpage you downloaded!
 			
 			
